@@ -52,11 +52,12 @@ def generate_launch_description():
     )
     
     # Add a static transform broadcaster for "lidar" frame
-    static_tf_broadcaster_node = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        arguments=['0.376', '0', '0.249', '-1.570796327', '0', '0', 'blickfeld_cube1_front', 'lidar'],
-        name='static_broadcaster_lidar'
-    )
+    # static_tf_broadcaster_node = Node(
+    #     package='tf2_ros',
+    #     executable='static_transform_publisher',
+    #     arguments=['0.376', '0', '0.249', '-1.570796327', '0', '0', 'blickfeld_cube1_front', 'lidar'],
+    #     name='static_broadcaster_lidar'
+    # )
 
-    return LaunchDescription([container,static_tf_broadcaster_node])
+    # return LaunchDescription([container,static_tf_broadcaster_node])
+    return LaunchDescription([container])
